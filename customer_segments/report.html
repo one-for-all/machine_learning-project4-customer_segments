@@ -12125,10 +12125,11 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ol>
-<li>Cafe, judging from its high spending on milk.</li>
-<li>Food market, because it purchases more food related products.</li>
-<li>Grocery store, becuase it has a rather high amount spent on grocery and detergents.</li>
+<li>Cafe, judging from its high spending on Milk which is 9656, relative to the median 3627.</li>
+<li>Food market, because it purchases more food related products, such as Fresh which is 14755 relative to the median of 8504.</li>
+<li>Grocery store, becuase it has a rather high amount spent on grocery and detergents, like 67298 for Grocery relative to the median of 4755.5 and 38102 for Detergents_Paper relative to its median 816.5.  </li>
 </ol>
+<p>I am using medians for comparison to account for the possibility of outliers.</p>
 
 </div>
 </div>
@@ -12214,10 +12215,12 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong><br>
-The feature I attempted to predict is <strong>Frozen</strong>.<br>
-The reported prediction score is 0.254.
-This feature is most likely necessary for identifying customers' spending habits, because the decision tree regressor did not predict this feature well from other features.</p>
+<p><strong>Answer:</strong></p>
+<ul>
+<li>The feature I attempted to predict is <strong>Frozen</strong>.  </li>
+<li>The reported prediction score is 0.254.</li>
+<li>This feature is most likely necessary for identifying customers' spending habits, because the decision tree regressor did not predict this feature well from other features.</li>
+</ul>
 
 </div>
 </div>
@@ -14034,10 +14037,12 @@ A4QlrUkuXgO6AAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong><br>
-Milk and Grocery, Milk and Detergents_Paper, Grocery and Detergents_Paper show some correlation, because there seems to be a linear relation for each pair.<br>
-The feature I attempted to predict indeed does not have much correlation with other features, so it confirmed my suggestion above.<br>
-The data mostly lie at the bottom left, which means that the majority of the datapoints have low spending on most features, while some outliers have much higher spending on certain categories.</p>
+<p><strong>Answer:</strong></p>
+<ul>
+<li>Milk and Grocery, Milk and Detergents_Paper, Grocery and Detergents_Paper show some correlation, because there seems to be a linear relation for each pair.  </li>
+<li>The feature I attempted to predict indeed does not have much correlation with other features, so it confirmed my suggestion above.  </li>
+<li>The data mostly lie at the bottom left, which means that the majority of the datapoints have low spending on most features, while some outliers have much higher spending on certain categories.</li>
+</ul>
 
 </div>
 </div>
@@ -19102,9 +19107,12 @@ outliers to be removed: [38, 57, 65, 66, 75, 81, 86, 95, 96, 98, 109, 128, 137, 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong><br>
-Data points at indexes 128, 154, 65, 66, 75 are outliers for more than one feature. These data points should be removed from dataset.<br>
-All data points that are outliers as defined by Tukey's Method are removed, because these data points might skew the learning process. However, Tukey's Method is not perfect, and it could be argued that these points might contain some information useful. But, we can try it for now.</p>
+<p><strong>Answer:</strong></p>
+<ul>
+<li>Data points at indexes 128, 154, 65, 66, 75 are outliers for more than one feature. These data points should be removed from dataset.  </li>
+<li>All data points that are outliers as defined by Tukey's Method are removed, because these data points might skew the learning process.  </li>
+<li>However, Tukey's Method is not perfect, and it could be argued that these points might contain some information useful. There are 42 of them, which is about 10% of the total number of data, so we might argue it is too much. But, we can try it for now.</li>
+</ul>
 
 </div>
 </div>
@@ -21749,9 +21757,11 @@ AABUDoEQAAAAgMohEAIAAABQOQRCAAAAACrn/wPzZFSLcFMeYAAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong><br>
-Segment 0 represent food market, according to its high spending on Fresh and Frozen, relative to the medians of the dataset.<br>
-Segment 1 represent supermarket, according to its high spending on most categories and particularly high spending on Milk, Grocery and Detergents_Paper, relative to medians.</p>
+<p><strong>Answer:</strong></p>
+<ul>
+<li>Segment 0 represent food market, according to its high spending on Fresh and Frozen, relative to the medians of the dataset.  </li>
+<li>Segment 1 represent supermarket, according to its high spending on most categories and particularly high spending on Milk, Grocery and Detergents_Paper, relative to medians.  </li>
+</ul>
 
 </div>
 </div>
@@ -21817,10 +21827,12 @@ sample 2: Grocery store, becuase it has a rather high amount spent on grocery an
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong><br>
-Sample point 0 goes to Cluster 1, which is supermarket.
-Sample point 1 goes to Cluster 0, which is food market.<br>
-Sample point 2 goes to Cluster 1, which is supermarket.</p>
+<p><strong>Answer:</strong></p>
+<ul>
+<li>Sample point 0 goes to Cluster 1, which is supermarket.  </li>
+<li>Sample point 1 goes to Cluster 0, which is food market.  </li>
+<li>Sample point 2 goes to Cluster 1, which is supermarket.</li>
+</ul>
 <p>Sample 1 and 2 corresponds with previous predictions well. Sample 0 does not correspond with prediction, partially because I assumed more categories than returned by the algorithm.</p>
 
 </div>
@@ -21857,9 +21869,12 @@ Sample point 2 goes to Cluster 1, which is supermarket.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong><br>
-Since segment 0 has high purchase on Fresh and Frozen, it is probably better to not implement this new scheme for this segment, since this segment often requires fast delivery to keep food good.<br>
-Segment 1's purchase is more on products that require less freshness, so it might be a good idea to implement new delivery service for this segment.</p>
+<p><strong>Answer:</strong></p>
+<ul>
+<li>Since segment 0 has high purchase on Fresh and Frozen, it is probably better to not implement this new scheme for this segment, since this segment often requires fast delivery to keep food good.  </li>
+<li>Segment 1's purchase is more on products that require less freshness, so it might be a good idea to implement new delivery service for this segment.  </li>
+</ul>
+<p>As for A/B testing, to see how the new delivery service would  actually affect the customers, we could select customers from both customer segments for trying out the new service and see how customers in each segment actually react.</p>
 
 </div>
 </div>
@@ -22538,10 +22553,12 @@ QgAAAAByh0AIAAAAQO78f7jvQ23+k2SGAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong><br>
-The clustering model corresponds remarkably well with the underlying distribution of Hotel/Restaurant/Cafe customers and Retailer customers.<br>
-Segment 0 aligns with Hotel/Restaurant/Cafe, and segment 1 aligns with Retailer.<br>
-My previous definition of segment 1 which was supermarket, somewhat corresponds with Retailer as the type. However, my definition of segment 0 which was food market, missed the correct type of customer entirely.</p>
+<p><strong>Answer:</strong></p>
+<ul>
+<li>The clustering model corresponds remarkably well with the underlying distribution of Hotel/Restaurant/Cafe customers and Retailer customers.  </li>
+<li>Segment 0 aligns with Hotel/Restaurant/Cafe, and segment 1 aligns with Retailer. However, neither segment can be classified purely to a channel, as each segment contains customers of both channels, although of vastly different numbers.  </li>
+<li>My previous definition of segment 1 which was supermarket, somewhat corresponds with Retailer as the type. However, my definition of segment 0 which was food market, missed the correct type of customer entirely.</li>
+</ul>
 
 </div>
 </div>
